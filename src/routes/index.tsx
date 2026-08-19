@@ -51,9 +51,10 @@ function Index() {
         <EventDetails />
         <Countdown />
         <DateTime />
-        <Location />
         <Confirmation />
+        <Location />
         <Footer />
+
       </div>
 
       <MusicPlayer visible={opened} />
