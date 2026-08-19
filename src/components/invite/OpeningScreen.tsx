@@ -33,17 +33,17 @@ export function OpeningScreen({
         />
 
         <h1
-          className="animate-luxe-fade-up font-display text-[3.6rem] font-light leading-none tracking-[0.16em] text-gold-gradient sm:text-7xl"
+          className="animate-luxe-fade-up font-display text-[2.8rem] font-light leading-none tracking-[0.16em] text-gold-gradient sm:text-7xl"
           style={{ animationDelay: "1.1s" }}
         >
-          JANTAR
+          JANTAR DE MULHERES
         </h1>
 
         <p
           className="animate-luxe-fade-up mt-7 max-w-xs font-display text-lg font-light italic leading-relaxed text-white/75 sm:text-xl"
           style={{ animationDelay: "1.9s" }}
         >
-          Uma noite para celebrar, brindar e aproveitar juntos.
+          Uma noite para celebrar, brindar e aproveitar juntas.
         </p>
 
         <div
