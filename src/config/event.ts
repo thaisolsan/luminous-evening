@@ -18,6 +18,9 @@ export const eventConfig = {
   /** Endereço usado no mapa incorporado */
   mapsEmbedQuery:
     "Edifício San Karlo, Rua Brasília, 40, Itapuã, Vila Velha - ES",
+  /** Coordenadas aproximadas do local (usadas por Waze e Uber) */
+  venueLat: -20.3556,
+  venueLng: -40.2925,
   /** Somente dígitos, com DDI. Ex: 5527999999999 */
   whatsappNumber: "5527992659303",
   whatsappMessage:
