@@ -1,7 +1,8 @@
 import { Wine } from "lucide-react";
-import { eventConfig, whatsappUrl } from "@/config/event";
+import { eventConfig } from "@/config/event";
 import { Reveal } from "./Reveal";
-import { GoldButton } from "./GoldButton";
+import { RsvpForm } from "./RsvpForm";
+
 
 export function Confirmation() {
   return (
@@ -23,19 +24,8 @@ export function Confirmation() {
             <p className="mx-auto mt-6 max-w-xs text-[0.62rem] uppercase tracking-[0.22em] text-gold/80 sm:max-w-sm sm:text-[0.68rem]">
               Confirme sua presença até {eventConfig.rsvpDeadlineLabel}
             </p>
-            <div className="mt-10">
-              <GoldButton
-                as="a"
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                fullWidth
-                pulse
-                className="py-5 text-[0.72rem] tracking-[0.3em]"
-              >
-                Confirmar presença
-              </GoldButton>
-            </div>
+            <RsvpForm />
+
           </div>
 
         </div>
