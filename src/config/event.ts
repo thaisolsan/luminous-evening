@@ -18,6 +18,9 @@ export const eventConfig = {
   /** Endereço usado no mapa incorporado */
   mapsEmbedQuery:
     "Edifício San Karlo, Rua Brasília, 40, Itapuã, Vila Velha - ES",
+  /** Coordenadas aproximadas do local (usadas por Waze e Uber) */
+  venueLat: -20.3556,
+  venueLng: -40.2925,
   /** Somente dígitos, com DDI. Ex: 5527999999999 */
   whatsappNumber: "5527992659303",
   whatsappMessage:
@@ -34,3 +37,13 @@ export const whatsappUrl = `https://wa.me/${eventConfig.whatsappNumber}?text=${e
 export const mapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
   eventConfig.mapsEmbedQuery,
 )}&output=embed`;
+
+/** Abre o Waze já em modo navegação até o local */
+export const wazeUrl = `https://waze.com/ul?ll=${eventConfig.venueLat}%2C${eventConfig.venueLng}&navigate=yes`;
+
+/** Abre o Uber com o destino já preenchido */
+export const uberUrl = `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff%5Blatitude%5D=${eventConfig.venueLat}&dropoff%5Blongitude%5D=${eventConfig.venueLng}&dropoff%5Bnickname%5D=${encodeURIComponent(
+  eventConfig.venueName,
+)}&dropoff%5Bformatted_address%5D=${encodeURIComponent(
+  `${eventConfig.venueAddress}, ${eventConfig.venueCity}`,
+)}`;
