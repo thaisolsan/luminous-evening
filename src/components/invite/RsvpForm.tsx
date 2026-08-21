@@ -97,12 +97,15 @@ export function RsvpForm() {
     window.setTimeout(() => window.open(url, "_blank", "noopener,noreferrer"), 700);
   };
 
-  const handleNext = async (event: React.FormEvent) => {
+  const handleNext = async (event: React.FormEvent): Promise<void> => {
     event.preventDefault();
 
     if (step === "name") {
       const parsed = nameSchema.safeParse(name);
-      if (!parsed.success) return toast.error(parsed.error.issues[0]!.message);
+      if (!parsed.success) {
+        toast.error(parsed.error.issues[0]!.message);
+        return;
+      }
       setName(parsed.data);
       setStep("whatsapp");
       return;
@@ -110,7 +113,10 @@ export function RsvpForm() {
 
     if (step === "whatsapp") {
       const parsed = whatsappSchema.safeParse(whatsapp);
-      if (!parsed.success) return toast.error(parsed.error.issues[0]!.message);
+      if (!parsed.success) {
+        toast.error(parsed.error.issues[0]!.message);
+        return;
+      }
       setWhatsapp(parsed.data);
       setStep("guests");
       return;
